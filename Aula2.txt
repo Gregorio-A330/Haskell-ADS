@@ -1,0 +1,290 @@
+IR até a pasta e executar via ghci o arquivo por :l Aula2.hs
+
+Recompilar :r
+
+*Aula2> :t Quinta
+Quinta :: Dia
+
+*Aula2> :t "Quinta"
+"Quinta" :: [Char]
+
+
+*Aula2> :t (Calendario 4 Quarta Mar)
+(Calendario 4 Quarta Mar) :: Calendario
+*Aula2> :t (Calendario 4 Quarta)
+(Calendario 4 Quarta) :: Mes -> Calendario
+*Aula2> :t (Calendario 4)
+(Calendario 4) :: Dia -> Mes -> Calendario
+*Aula2> :t (Calendario)
+(Calendario) :: Int -> Dia -> Mes -> Calendario
+*Aula2>
+
+
+
+
+Gabriel Adriano e Peter - 3.17 | 3.5 | 3.21
+
+
+
+
+
+Microsoft Windows [versão 10.0.18363.657]
+(c) 2019 Microsoft Corporation. Todos os direitos reservados.
+
+C:\Users\grego>cd documents
+
+C:\Users\grego\Documents>dir
+ O volume na unidade C não tem nome.
+ O Número de Série do Volume é 6CE5-A093
+
+ Pasta de C:\Users\grego\Documents
+
+04/03/2020  19:10    <DIR>          .
+04/03/2020  19:10    <DIR>          ..
+04/03/2020  19:23    <DIR>          GitHub
+18/02/2020  13:55    <DIR>          Recibos de pagamento Stefanini - 2019
+18/02/2020  13:50    <DIR>          WindowsPowerShell
+               0 arquivo(s)              0 bytes
+               5 pasta(s)   44.312.072.192 bytes disponíveis
+
+C:\Users\grego\Documents>cd github
+
+C:\Users\grego\Documents\GitHub>dir
+ O volume na unidade C não tem nome.
+ O Número de Série do Volume é 6CE5-A093
+
+ Pasta de C:\Users\grego\Documents\GitHub
+
+04/03/2020  19:23    <DIR>          .
+04/03/2020  19:23    <DIR>          ..
+04/03/2020  19:25    <DIR>          Haskell-ADS
+04/03/2020  19:14    <DIR>          HTML-Basico
+               0 arquivo(s)              0 bytes
+               4 pasta(s)   44.311.810.048 bytes disponíveis
+
+C:\Users\grego\Documents\GitHub>cd haskell-ads
+
+C:\Users\grego\Documents\GitHub\Haskell-ADS>dir
+ O volume na unidade C não tem nome.
+ O Número de Série do Volume é 6CE5-A093
+
+ Pasta de C:\Users\grego\Documents\GitHub\Haskell-ADS
+
+04/03/2020  19:25    <DIR>          .
+04/03/2020  19:25    <DIR>          ..
+04/03/2020  19:23                66 .gitattributes
+04/03/2020  19:25                22 Aula2.hs
+04/03/2020  19:23                32 README.md
+               3 arquivo(s)            120 bytes
+               2 pasta(s)   44.311.810.048 bytes disponíveis
+
+C:\Users\grego\Documents\GitHub\Haskell-ADS>ghci
+GHCi, version 8.6.5: http://www.haskell.org/ghc/  :? for help
+Prelude> ghc
+
+<interactive>:1:1: error: Variable not in scope: ghc
+Prelude> :l aula2.hs
+[1 of 1] Compiling Aula2            ( aula2.hs, interpreted )
+Ok, one module loaded.
+*Aula2> :t Quinta
+
+<interactive>:1:1: error: Data constructor not in scope: Quinta
+*Aula2> :t Quinta
+
+<interactive>:1:1: error: Data constructor not in scope: Quinta
+*Aula2> :l
+Ok, no modules loaded.
+Prelude> :t Quinta
+
+<interactive>:1:1: error: Data constructor not in scope: Quinta
+Prelude> :l
+Ok, no modules loaded.
+Prelude> exit
+
+<interactive>:8:1: error: Variable not in scope: exit
+Prelude> :t dia
+
+<interactive>:1:1: error:
+    * Variable not in scope: dia
+    * Perhaps you meant `div' (imported from Prelude)
+Prelude>
+Prelude>
+Prelude> :l Aula2.hs
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+Ok, one module loaded.
+*Aula2> :t Quinta
+Quinta :: Dia
+*Aula2> :t "Quinta"
+"Quinta" :: [Char]
+*Aula2> :t (Undefined :: Dia)
+
+<interactive>:1:2: error:
+    * Data constructor not in scope: Undefined :: Dia
+    * Perhaps you meant variable `undefined' (imported from Prelude)
+*Aula2> :l Aula2.hs
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+Ok, one module loaded.
+*Aula2> :t Dia
+
+<interactive>:1:1: error: Data constructor not in scope: Dia
+*Aula2> :t Quinta
+Quinta :: Dia
+*Aula2>
+*Aula2> :t (undefined :: Dia)
+(undefined :: Dia) :: Dia
+*Aula2> "Quinta"
+"Quinta"
+*Aula2> Quinta
+
+<interactive>:19:1: error:
+    * No instance for (Show Dia) arising from a use of `print'
+    * In a stmt of an interactive GHCi command: print it
+*Aula2> :l Aula2.hs
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+Ok, one module loaded.
+*Aula2> Quinta
+Quinta
+*Aula2> Quarta == Terca
+
+<interactive>:22:1: error:
+    * No instance for (Eq Dia) arising from a use of `=='
+    * In the expression: Quarta == Terca
+      In an equation for `it': it = Quarta == Terca
+*Aula2> :r
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+Ok, one module loaded.
+*Aula2> Quarta == Terca
+False
+*Aula2> *Aula2> :t Quinta
+
+<interactive>:25:1: error: parse error on input `*'
+*Aula2> Quinta :: Dia
+Quinta
+*Aula2> *Aula2> :t "Quinta"
+
+<interactive>:27:1: error: parse error on input `*'
+*Aula2> "Quinta" :: [Char]
+"Quinta"
+*Aula2> :r
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+Ok, one module loaded.
+*Aula2> Domingo > Terca
+False
+*Aula2> :r
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+Ok, one module loaded.
+*Aula2> [Domingo .. Sexta]
+[Domingo,Segunda,Terca,Quarta,Quinta,Sexta]
+*Aula2> :r
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+Ok, one module loaded.
+*Aula2> agenda Doming
+
+<interactive>:34:8: error:
+    * Data constructor not in scope: Doming :: Dia
+    * Perhaps you meant `Domingo' (line 5)
+*Aula2> agenda Domingo
+"Dia que ninguem liga"
+*Aula2> :r
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+Ok, one module loaded.
+*Aula2> agenda Domingo
+"Dia que ninguem liga... Domingo"
+*Aula2> :r
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+
+Aula2.hs:23:1: error:
+    * Couldn't match expected type `Int'
+                  with actual type `Integer -> [Char]'
+    * The equation(s) for `toDia' have one argument,
+      but its type `Int' has none
+   |
+23 | toDia 1 = "Domingo"
+   | ^^^^^^^^^^^^^^^^^^^^...
+Failed, no modules loaded.
+Prelude> :r
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+
+Aula2.hs:23:11: error:
+    * Couldn't match expected type `Dia' with actual type `[Char]'
+    * In the expression: "Domingo"
+      In an equation for `toDia': toDia 1 = "Domingo"
+   |
+23 | toDia 1 = "Domingo"
+   |           ^^^^^^^^^
+
+Aula2.hs:24:11: error:
+    * Couldn't match expected type `Dia' with actual type `[Char]'
+    * In the expression: "Segunda"
+      In an equation for `toDia': toDia 2 = "Segunda"
+   |
+24 | toDia 2 = "Segunda"
+   |           ^^^^^^^^^
+
+Aula2.hs:25:11: error:
+    * Couldn't match expected type `Dia' with actual type `[Char]'
+    * In the expression: "Terca"
+      In an equation for `toDia': toDia 3 = "Terca"
+   |
+25 | toDia 3 = "Terca"
+   |           ^^^^^^^
+Failed, no modules loaded.
+Prelude> :r
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+Ok, one module loaded.
+*Aula2> toDia 1
+Domingo
+*Aula2> :r
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+Ok, one module loaded.
+*Aula2> toNum Quinta
+5
+*Aula2> :r
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+Ok, one module loaded.
+*Aula2> translate domingo
+
+<interactive>:45:11: error:
+    * Variable not in scope: domingo :: Dia
+    * Perhaps you meant data constructor `Domingo' (line 5)
+*Aula2> translate Domingo
+
+<interactive>:46:1: error:
+    * No instance for (Show Day) arising from a use of `print'
+    * In a stmt of an interactive GHCi command: print it
+*Aula2> :r
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+
+Aula2.hs:7:88: error: parse error on input `show'
+  |
+7 | data Day = Sunday | Monday| Thurday | Wednesday | Tuesday | Friday | Saturday deriving show
+  |                                                                                        ^^^^
+Failed, no modules loaded.
+Prelude> :r
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+Ok, one module loaded.
+*Aula2> translate Domingo
+Sunday
+*Aula2> :r
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+
+Aula2.hs:31:11: error:
+    * Couldn't match expected type `Dia' with actual type `[Char]'
+    * In the expression: "Porra Nenhuma"
+      In an equation for `toDia': toDia _ = "Porra Nenhuma"
+   |
+31 | toDia _ = ""
+   |           ^^
+Failed, no modules loaded.
+Prelude> :r
+[1 of 1] Compiling Aula2            ( Aula2.hs, interpreted )
+Ok, one module loaded.
+*Aula2> :t (Calendario 4 Quarta Mar)
+(Calendario 4 Quarta Mar) :: Calendario
+*Aula2> :t (Calendario 4 Quarta)
+(Calendario 4 Quarta) :: Mes -> Calendario
+*Aula2> :t (Calendario 4)
+(Calendario 4) :: Dia -> Mes -> Calendario
+*Aula2> :t (Calendario)
+(Calendario) :: Int -> Dia -> Mes -> Calendario
+*Aula2>
